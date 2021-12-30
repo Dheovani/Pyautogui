@@ -1,6 +1,5 @@
 import pyautogui
 import time
-from screeninfo import get_monitors
 
 pyautogui.PAUSE = 3
 pyautogui.FAILSAFE = True
@@ -37,6 +36,7 @@ pyautogui.hotkey('g', 'p') # Atalho do teclado para acessar meu perfil
 time.sleep(5)
 pyautogui.press('j') # Atalho do teclado para seguir para o próximo tweet
 pyautogui.press('enter')
+time.sleep(3)
 
 # Tirar um print do tweet
 
@@ -46,19 +46,9 @@ pyautogui.screenshot('tweet.png')
 
 pyautogui.hotkey('ctrl', 'l') # Atalho do teclado para copiar um link
 pyautogui.hotkey('ctrl', 'c')
-for monitors in get_monitors():
-    screen_height = monitors.height
-    screen_width = monitors.width
-pyautogui.click(screen_width, screen_height) # Estamos minimizando todas as janelas
-# Através da lixeira, vamos buscar o repositório local do GitHub onde está o código desse bot
-pyautogui.write('lixeira')
+pyautogui.hotkey('win', 'e') # Abrindo o explorador de arquivos
+pyautogui.write('GitHub')
 pyautogui.press('enter')
-pyautogui.hotkey('ctrl', 'e') # Atalho do teclado para abrir a aba de pesquisa
-pyautogui.press('tab')
-for b in range(7):
-    pyautogui.press('down')
-pyautogui.press('enter')
-pyautogui.press('tab')
 pyautogui.write('Pyautogui')
 pyautogui.press('enter')
 pyautogui.write('links')
