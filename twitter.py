@@ -2,7 +2,7 @@ import pyautogui
 import time
 from screeninfo import get_monitors
 
-pyautogui.PAUSE = 2
+pyautogui.PAUSE = 3
 pyautogui.FAILSAFE = True
 
 # Abrir o navegador
@@ -15,7 +15,7 @@ pyautogui.press('enter')
 
 pyautogui.write('Twitter')
 pyautogui.press('enter')
-time.sleep(15) # Irei pausar o código por 10 segundos para o navegador carregar
+time.sleep(15) # Irei pausar o código por 15 segundos para o navegador carregar
 
 # Fazer um tweet
 
@@ -34,9 +34,13 @@ time.sleep(5)
 # Abrir o tweet
 
 pyautogui.hotkey('g', 'p') # Atalho do teclado para acessar meu perfil
-for a in range(8):
-    pyautogui.press('tab')
+time.sleep(5)
+pyautogui.press('j') # Atalho do teclado para seguir para o próximo tweet
 pyautogui.press('enter')
+
+# Tirar um print do tweet
+
+pyautogui.screenshot('tweet.png')
 
 # Copiar o link desse tweet
 
@@ -63,6 +67,3 @@ time.sleep(5)
 pyautogui.hotkey('ctrl', 'v')
 pyautogui.hotkey('ctrl', 's')
 pyautogui.hotkey('ctrl', 'w')
-
-# Tirar um print do tweet
-#pyautogui.screenshot('tweet.png')
