@@ -45,7 +45,7 @@ pyautogui.screenshot('tweet.png')
 # Copiar o link desse tweet
 
 pyautogui.hotkey('ctrl', 'l') # Atalho do teclado para copiar um link
-pyautogui.hotkey('ctrl', 'x')
+pyautogui.hotkey('ctrl', 'c')
 for monitors in get_monitors():
     screen_height = monitors.height
     screen_width = monitors.width
