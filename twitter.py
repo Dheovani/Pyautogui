@@ -38,6 +38,11 @@ pyautogui.press('j') # Atalho do teclado para seguir para o próximo tweet
 pyautogui.press('enter')
 time.sleep(3)
 
+# Tirar um print do tweet
+
+pyautogui.screenshot('tweet.png')
+time.sleep(3)
+
 # Copiar o link desse tweet
 
 pyautogui.hotkey('ctrl', 'l') # Atalho do teclado para copiar um link
